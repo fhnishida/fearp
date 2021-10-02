@@ -14081,7 +14081,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x1f6e80fa4c0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x23e0e640130&gt;</pre>
 </div>
 
 </div>
@@ -14137,7 +14137,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x1f6eabb15e0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x23e0e6773a0&gt;</pre>
 </div>
 
 </div>
@@ -14641,7 +14641,6 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Realizando iterações até convergência de phi</span>
-
 <span class="k">def</span> <span class="nf">converg_phi</span><span class="p">(</span><span class="n">phi_ini</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r_ini</span><span class="p">):</span>
     <span class="n">norm_distr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
     <span class="n">tol_distr</span> <span class="o">=</span> <span class="mf">1e-5</span>
@@ -14889,6 +14888,8 @@ a.anchor-link {
         <span class="n">r_min</span> <span class="o">=</span> <span class="n">r_m</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="n">r_m</span><span class="p">,</span> <span class="s2">&quot; | &quot;</span><span class="p">,</span> <span class="n">riqueza</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Taxa de juros que torna nula a poupança agregada =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14910,7 +14911,6 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>0.25  |  -0.18738775510204075
 -0.125  |  0.011448979591836566
-0.0625  |  -0.060459183673469266
 </pre>
 </div>
 </div>
@@ -14922,7 +14922,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\fhnis\AppData\Local\Temp/ipykernel_3604/3478190489.py:15: RuntimeWarning: divide by zero encountered in double_scalars
+<pre>C:\Users\fhnis\AppData\Local\Temp/ipykernel_17200/3478190489.py:15: RuntimeWarning: divide by zero encountered in double_scalars
   return ( c**(1-delta) ) / ( 1 - delta)
 </pre>
 </div>
@@ -14935,7 +14935,8 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>-0.03125  |  -0.012668367346938875
+<pre>0.0625  |  -0.060459183673469266
+-0.03125  |  -0.012668367346938875
 -0.078125  |  0.0037576530612244484
 -0.0546875  |  -0.0024553571428571155
 -0.06640625  |  0.0011001275510203802
@@ -14955,6 +14956,8 @@ a.anchor-link {
 -0.06212258338928223  |  1.344096903560174e-07
 -0.062122225761413574  |  -2.2321817836875105e-07
 -0.0621224045753479  |  -4.440424396581766e-08
+
+Taxa de juros que torna nula a poupança agregada = -0.06212
 </pre>
 </div>
 </div>
@@ -14984,6 +14987,8 @@ a.anchor-link {
     <span class="n">riqueza</span> <span class="o">=</span> <span class="n">agreg_econ</span><span class="p">(</span><span class="n">phi_0</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
     <span class="n">r</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">riqueza</span> <span class="o">*</span> <span class="n">copysign</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot; | &quot;</span><span class="p">,</span> <span class="n">riqueza</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Taxa de juros que torna nula a poupança agregada =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15113,6 +15118,8 @@ a.anchor-link {
 -0.059048782018651234  |  -0.0011843779647088388
 -0.05911462758443244  |  -0.0011144832874712472
 -0.059171819376856616  |  -0.0009670050686288664
+
+Taxa de juros que torna nula a poupança agregada = -0.06212
 </pre>
 </div>
 </div>
