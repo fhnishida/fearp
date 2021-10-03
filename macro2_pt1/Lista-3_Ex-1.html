@@ -14079,7 +14079,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x23e0e640130&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x14da9aba100&gt;</pre>
 </div>
 
 </div>
@@ -14135,7 +14135,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;matplotlib.legend.Legend at 0x23e0e6773a0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x14dac5942e0&gt;</pre>
 </div>
 
 </div>
@@ -14880,13 +14880,13 @@ a.anchor-link {
     
     <span class="n">riqueza</span> <span class="o">=</span> <span class="n">agreg_econ</span><span class="p">(</span><span class="n">phi_0</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r_m</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
     
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s2">&quot; | riqueza agregada =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">riqueza</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    
     <span class="k">if</span> <span class="n">riqueza</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">r_max</span> <span class="o">=</span> <span class="n">r_m</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">r_min</span> <span class="o">=</span> <span class="n">r_m</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="n">r_m</span><span class="p">,</span> <span class="s2">&quot; | &quot;</span><span class="p">,</span> <span class="n">riqueza</span><span class="p">)</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Taxa de juros que torna nula a poupança agregada =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </pre></div>
 
@@ -14907,8 +14907,8 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.25  |  -0.18738775510204075
--0.125  |  0.011448979591836566
+<pre>r = 0.25  | riqueza agregada = -0.18739
+r = -0.125  | riqueza agregada = 0.01145
 </pre>
 </div>
 </div>
@@ -14920,7 +14920,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\fhnis\AppData\Local\Temp/ipykernel_17200/3478190489.py:15: RuntimeWarning: divide by zero encountered in double_scalars
+<pre>C:\Users\fhnis\AppData\Local\Temp/ipykernel_20292/3478190489.py:15: RuntimeWarning: divide by zero encountered in double_scalars
   return ( c**(1-delta) ) / ( 1 - delta)
 </pre>
 </div>
@@ -14933,27 +14933,27 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.0625  |  -0.060459183673469266
--0.03125  |  -0.012668367346938875
--0.078125  |  0.0037576530612244484
--0.0546875  |  -0.0024553571428571155
--0.06640625  |  0.0011001275510203802
--0.060546875  |  -0.0007592474489795677
--0.0634765625  |  0.00012962372448965288
--0.06201171875  |  -2.9097576530793656e-05
--0.062744140625  |  0.00013189572704071445
--0.0623779296875  |  9.221540178576014e-05
--0.06219482421875  |  7.237523915809042e-05
--0.062103271484375  |  -1.9177495216917383e-05
--0.0621490478515625  |  2.659887197058175e-05
--0.06212615966796875  |  3.710688376998717e-06
--0.062114715576171875  |  -7.733403419998147e-06
--0.06212043762207031  |  -2.0113575214431197e-06
--0.06212329864501953  |  8.496654276914963e-07
--0.06212186813354492  |  -5.808460470150233e-07
--0.06212258338928223  |  1.344096903560174e-07
--0.062122225761413574  |  -2.2321817836875105e-07
--0.0621224045753479  |  -4.440424396581766e-08
+<pre>r = 0.0625  | riqueza agregada = -0.06046
+r = -0.03125  | riqueza agregada = -0.01267
+r = -0.07812  | riqueza agregada = 0.00376
+r = -0.05469  | riqueza agregada = -0.00246
+r = -0.06641  | riqueza agregada = 0.0011
+r = -0.06055  | riqueza agregada = -0.00076
+r = -0.06348  | riqueza agregada = 0.00013
+r = -0.06201  | riqueza agregada = -3e-05
+r = -0.06274  | riqueza agregada = 0.00013
+r = -0.06238  | riqueza agregada = 9e-05
+r = -0.06219  | riqueza agregada = 7e-05
+r = -0.0621  | riqueza agregada = -2e-05
+r = -0.06215  | riqueza agregada = 3e-05
+r = -0.06213  | riqueza agregada = 0.0
+r = -0.06211  | riqueza agregada = -1e-05
+r = -0.06212  | riqueza agregada = -0.0
+r = -0.06212  | riqueza agregada = 0.0
+r = -0.06212  | riqueza agregada = -0.0
+r = -0.06212  | riqueza agregada = 0.0
+r = -0.06212  | riqueza agregada = -0.0
+r = -0.06212  | riqueza agregada = -0.0
 
 Taxa de juros que torna nula a poupança agregada = -0.06212
 </pre>
@@ -14971,7 +14971,7 @@ Taxa de juros que torna nula a poupança agregada = -0.06212
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Por Penalidade</span>
-<span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="n">r_ini</span>
+<span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="n">r_ini</span>  <span class="c1"># Precisa começar no negativo para convergir para número negativo</span>
 <span class="n">riqueza</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
 
 <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">copysign</span>
@@ -14981,12 +14981,14 @@ Taxa de juros que torna nula a poupança agregada = -0.06212
     
     <span class="n">phi_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">n_a</span><span class="p">,</span> <span class="n">T</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">T</span> <span class="o">*</span> <span class="n">n_a</span><span class="p">)</span>
     <span class="n">phi_star</span> <span class="o">=</span> <span class="n">converg_phi</span><span class="p">(</span><span class="n">phi_0</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">)</span>
-    
     <span class="n">riqueza</span> <span class="o">=</span> <span class="n">agreg_econ</span><span class="p">(</span><span class="n">phi_0</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s2">&quot; | riqueza agregada =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">riqueza</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    
     <span class="n">r</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">riqueza</span> <span class="o">*</span> <span class="n">copysign</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot; | &quot;</span><span class="p">,</span> <span class="n">riqueza</span><span class="p">)</span>
+    
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Taxa de juros que torna nula a poupança agregada =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Taxa de juros que torna nula a poupança agregada =&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15006,118 +15008,118 @@ Taxa de juros que torna nula a poupança agregada = -0.06212
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>-0.04034103745754199  |  -0.00848979591836734
--0.04068771368275237  |  -0.00855692172613153
--0.041033192617810396  |  -0.008455143460104942
--0.041370688068390005  |  -0.008191297178108039
--0.04170709724661701  |  -0.008098699686712028
--0.04203553093304715  |  -0.007843923161546163
--0.042356096139964404  |  -0.007597122128177387
--0.042672393103136634  |  -0.007439822227382622
--0.042980964752946486  |  -0.007205157917271384
--0.04328194426350316  |  -0.0069782189205230645
--0.04357902955558374  |  -0.0068405047160886075
--0.04387228264647121  |  -0.006706684730130511
--0.04415455874375839  |  -0.0064134316392430325
--0.04443699001424251  |  -0.0063760535011396354
--0.04471954933056144  |  -0.006338520189839174
--0.04500221046675777  |  -0.006300858832703805
--0.0452886449791608  |  -0.00634472830875259
--0.0455750095501039  |  -0.006303191755533296
--0.045857539455628135  |  -0.006180092490712415
--0.046128786225780705  |  -0.005897562585188117
--0.04638905282973562  |  -0.0056263158150356915
--0.046657687908974295  |  -0.005774212476386825
--0.0469191038245447  |  -0.005587210050209598
--0.047204319892108444  |  -0.006060488012190012
--0.047477726415029474  |  -0.005775271944626302
--0.047739662383773515  |  -0.005501865421705419
--0.0480022255913708  |  -0.005484827412145105
--0.04825356159612209  |  -0.005222264204547649
--0.0485059012928832  |  -0.005215826158980031
--0.048755217553324195  |  -0.00512675176834122
--0.04900559875643614  |  -0.005122333467083904
--0.04924895439507514  |  -0.004953584917033332
--0.0494855149148222  |  -0.0047918619314555305
--0.04971550880580287  |  -0.004636934064769668
--0.049935085554247714  |  -0.004406940173788958
--0.050148713903510264  |  -0.0042689960784052725
--0.0503524983106001  |  -0.004055367729142742
--0.0505468091152324  |  -0.003851583322053046
--0.0507361525892559  |  -0.0037389051704819535
--0.050920720317698134  |  -0.0036311943495196952
--0.051104870796586835  |  -0.003609891927200043
--0.05128861605731645  |  -0.0035890067544336046
--0.05146776618970107  |  -0.0034868941467653975
--0.05164672168427594  |  -0.0034710093205031415
--0.05182548625628296  |  -0.0034553191320505863
--0.05199981849785918  |  -0.003358187213104841
--0.05216990081135171  |  -0.0032654876245898886
--0.05234018262972376  |  -0.0032586706172197614
--0.052510651802618366  |  -0.0032516541049703853
--0.05267699633558595  |  -0.00316281758513682
--0.05284801904876837  |  -0.0032413710113527714
--0.05301485779626909  |  -0.003151980951231384
--0.05317769198947713  |  -0.0030667748567921823
--0.05333234128915777  |  -0.0029039406635842356
--0.053483535002978214  |  -0.002830924016964767
--0.05363580480678996  |  -0.002842995609266765
--0.05379349068998609  |  -0.0029356237646386524
--0.053943133418418866  |  -0.0027779378814425733
--0.054089513665986466  |  -0.0027099278060710276
--0.05423277957572791  |  -0.0026451802115646777
--0.05437751245782635  |  -0.002665179607945775
--0.054519191311540906  |  -0.002602079378908405
--0.05465349551178771  |  -0.002460400525193727
--0.054789717308829713  |  -0.0024893616310695454
--0.05492328033692023  |  -0.002434772487088855
--0.05504981584566583  |  -0.0023012094589981388
--0.055178669538548664  |  -0.00233793925637501
--0.05530521320463102  |  -0.002290718216553402
--0.05542503294821055  |  -0.002164174550471068
--0.05553845728102668  |  -0.002044354806891524
--0.05565034448455288  |  -0.0020125631271366274
--0.05576077005233419  |  -0.0019823085766716587
--0.055869806057049894  |  -0.001953515661951528
--0.055972951873713366  |  -0.001844479657235752
--0.05607508175091777  |  -0.0018229664936337516
--0.05617166087948126  |  -0.0017208366164288523
--0.056262972256789875  |  -0.0016242574878657158
--0.056353886631432905  |  -0.0016145787636181173
--0.05644442400919924  |  -0.001605297042036729
--0.0565576834739765  |  -0.0020045555826374685
--0.056674004161752965  |  -0.0020545614239828136
--0.056783958549917496  |  -0.0019382407362063332
--0.05689251494527167  |  -0.0019099190011030534
--0.056999744205586476  |  -0.0018829952588098981
--0.05710571383707265  |  -0.0018573986515563377
--0.057210488131958524  |  -0.0018330616731312217
--0.05731880719767143  |  -0.0018915526843681194
--0.05742111121051514  |  -0.001783233618655102
--0.05751771322419392  |  -0.0016809296058112998
--0.05760891234986043  |  -0.0015843275921325617
--0.057694994106379925  |  -0.0014931284664662548
--0.057780947416040195  |  -0.0014886793630078804
--0.05786677875488979  |  -0.0014843587064087014
--0.05794776364524404  |  -0.001398527367559238
--0.05802889946336387  |  -0.001399175130265969
--0.05811492163692388  |  -0.001481304618268783
--0.05820081585571619  |  -0.0014769150977700786
--0.05828183073937913  |  -0.0013910208789776426
--0.05836299444971337  |  -0.0013916386483760284
--0.058444298596255745  |  -0.0013921075911029982
--0.05852095781577879  |  -0.0013108034445606133
--0.05860279272512737  |  -0.0013974095311599373
--0.05867993980724874  |  -0.0013155746218114555
--0.058752655678108195  |  -0.001238427539689961
--0.05882598619425809  |  -0.0012473443218917121
--0.05890470557999437  |  -0.0013372791118643457
--0.05897888734141364  |  -0.0012585597261282238
--0.059048782018651234  |  -0.0011843779647088388
--0.05911462758443244  |  -0.0011144832874712472
--0.059171819376856616  |  -0.0009670050686288664
+<pre>r = -0.04  | riqueza agregada = -0.00849
+r = -0.04034  | riqueza agregada = -0.00856
+r = -0.04069  | riqueza agregada = -0.00846
+r = -0.04103  | riqueza agregada = -0.00819
+r = -0.04137  | riqueza agregada = -0.0081
+r = -0.04171  | riqueza agregada = -0.00784
+r = -0.04204  | riqueza agregada = -0.0076
+r = -0.04236  | riqueza agregada = -0.00744
+r = -0.04267  | riqueza agregada = -0.00721
+r = -0.04298  | riqueza agregada = -0.00698
+r = -0.04328  | riqueza agregada = -0.00684
+r = -0.04358  | riqueza agregada = -0.00671
+r = -0.04387  | riqueza agregada = -0.00641
+r = -0.04415  | riqueza agregada = -0.00638
+r = -0.04444  | riqueza agregada = -0.00634
+r = -0.04472  | riqueza agregada = -0.0063
+r = -0.045  | riqueza agregada = -0.00634
+r = -0.04529  | riqueza agregada = -0.0063
+r = -0.04558  | riqueza agregada = -0.00618
+r = -0.04586  | riqueza agregada = -0.0059
+r = -0.04613  | riqueza agregada = -0.00563
+r = -0.04639  | riqueza agregada = -0.00577
+r = -0.04666  | riqueza agregada = -0.00559
+r = -0.04692  | riqueza agregada = -0.00606
+r = -0.0472  | riqueza agregada = -0.00578
+r = -0.04748  | riqueza agregada = -0.0055
+r = -0.04774  | riqueza agregada = -0.00548
+r = -0.048  | riqueza agregada = -0.00522
+r = -0.04825  | riqueza agregada = -0.00522
+r = -0.04851  | riqueza agregada = -0.00513
+r = -0.04876  | riqueza agregada = -0.00512
+r = -0.04901  | riqueza agregada = -0.00495
+r = -0.04925  | riqueza agregada = -0.00479
+r = -0.04949  | riqueza agregada = -0.00464
+r = -0.04972  | riqueza agregada = -0.00441
+r = -0.04994  | riqueza agregada = -0.00427
+r = -0.05015  | riqueza agregada = -0.00406
+r = -0.05035  | riqueza agregada = -0.00385
+r = -0.05055  | riqueza agregada = -0.00374
+r = -0.05074  | riqueza agregada = -0.00363
+r = -0.05092  | riqueza agregada = -0.00361
+r = -0.0511  | riqueza agregada = -0.00359
+r = -0.05129  | riqueza agregada = -0.00349
+r = -0.05147  | riqueza agregada = -0.00347
+r = -0.05165  | riqueza agregada = -0.00346
+r = -0.05183  | riqueza agregada = -0.00336
+r = -0.052  | riqueza agregada = -0.00327
+r = -0.05217  | riqueza agregada = -0.00326
+r = -0.05234  | riqueza agregada = -0.00325
+r = -0.05251  | riqueza agregada = -0.00316
+r = -0.05268  | riqueza agregada = -0.00324
+r = -0.05285  | riqueza agregada = -0.00315
+r = -0.05301  | riqueza agregada = -0.00307
+r = -0.05318  | riqueza agregada = -0.0029
+r = -0.05333  | riqueza agregada = -0.00283
+r = -0.05348  | riqueza agregada = -0.00284
+r = -0.05364  | riqueza agregada = -0.00294
+r = -0.05379  | riqueza agregada = -0.00278
+r = -0.05394  | riqueza agregada = -0.00271
+r = -0.05409  | riqueza agregada = -0.00265
+r = -0.05423  | riqueza agregada = -0.00267
+r = -0.05438  | riqueza agregada = -0.0026
+r = -0.05452  | riqueza agregada = -0.00246
+r = -0.05465  | riqueza agregada = -0.00249
+r = -0.05479  | riqueza agregada = -0.00243
+r = -0.05492  | riqueza agregada = -0.0023
+r = -0.05505  | riqueza agregada = -0.00234
+r = -0.05518  | riqueza agregada = -0.00229
+r = -0.05531  | riqueza agregada = -0.00216
+r = -0.05543  | riqueza agregada = -0.00204
+r = -0.05554  | riqueza agregada = -0.00201
+r = -0.05565  | riqueza agregada = -0.00198
+r = -0.05576  | riqueza agregada = -0.00195
+r = -0.05587  | riqueza agregada = -0.00184
+r = -0.05597  | riqueza agregada = -0.00182
+r = -0.05608  | riqueza agregada = -0.00172
+r = -0.05617  | riqueza agregada = -0.00162
+r = -0.05626  | riqueza agregada = -0.00161
+r = -0.05635  | riqueza agregada = -0.00161
+r = -0.05644  | riqueza agregada = -0.002
+r = -0.05656  | riqueza agregada = -0.00205
+r = -0.05667  | riqueza agregada = -0.00194
+r = -0.05678  | riqueza agregada = -0.00191
+r = -0.05689  | riqueza agregada = -0.00188
+r = -0.057  | riqueza agregada = -0.00186
+r = -0.05711  | riqueza agregada = -0.00183
+r = -0.05721  | riqueza agregada = -0.00189
+r = -0.05732  | riqueza agregada = -0.00178
+r = -0.05742  | riqueza agregada = -0.00168
+r = -0.05752  | riqueza agregada = -0.00158
+r = -0.05761  | riqueza agregada = -0.00149
+r = -0.05769  | riqueza agregada = -0.00149
+r = -0.05778  | riqueza agregada = -0.00148
+r = -0.05787  | riqueza agregada = -0.0014
+r = -0.05795  | riqueza agregada = -0.0014
+r = -0.05803  | riqueza agregada = -0.00148
+r = -0.05811  | riqueza agregada = -0.00148
+r = -0.0582  | riqueza agregada = -0.00139
+r = -0.05828  | riqueza agregada = -0.00139
+r = -0.05836  | riqueza agregada = -0.00139
+r = -0.05844  | riqueza agregada = -0.00131
+r = -0.05852  | riqueza agregada = -0.0014
+r = -0.0586  | riqueza agregada = -0.00132
+r = -0.05868  | riqueza agregada = -0.00124
+r = -0.05875  | riqueza agregada = -0.00125
+r = -0.05883  | riqueza agregada = -0.00134
+r = -0.0589  | riqueza agregada = -0.00126
+r = -0.05898  | riqueza agregada = -0.00118
+r = -0.05905  | riqueza agregada = -0.00111
+r = -0.05911  | riqueza agregada = -0.00097
 
-Taxa de juros que torna nula a poupança agregada = -0.06212
+Taxa de juros que torna nula a poupança agregada = -0.05917
 </pre>
 </div>
 </div>
