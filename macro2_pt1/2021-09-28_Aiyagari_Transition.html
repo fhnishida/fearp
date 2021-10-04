@@ -14501,11 +14501,11 @@ Calculando o SS final
 <li>Note que, como o estoque de capital no período $t=1$ é determinado pelas decisões no tempo $0$, temos que $\hat{K}_1 = K_0$</li>
 <li>Também, note que $L_t = L_0 = \bar{L}$ é fixo.</li>
 </ul>
-<h5 id="Passo-4.5">Passo 4.5<a class="anchor-link" href="#Passo-4.5">&#182;</a></h5><p>Então, com os chutes no estoque de capital, obtemos $\{\hat{r}_t, \hat{w}_t\}^{N-1}_{t=1}$ determinados por
+<h5 id="Passo-4.5">Passo 4.5<a class="anchor-link" href="#Passo-4.5">&#182;</a></h5><p>Então, com os chutes no estoque de capital, obtemos $\{\hat{r}_t, \hat{w}_t, \hat{T}_t\}^{N-1}_{t=1}$ determinados por
 \begin{align*}
     \hat{w}_t &amp;= F_L(\hat{K}_t, \bar{L}) \\
     \hat{r}_t &amp;= F_k(\hat{K}_t, \bar{L}) - \delta \\
-    \hat{t}_t &amp;= \tau_t \hat{r}_t \hat{K}_t
+    \hat{T}_t &amp;= \tau_t \hat{r}_t \hat{K}_t
 \end{align*}</p>
 <h5 id="Passo-5">Passo 5<a class="anchor-link" href="#Passo-5">&#182;</a></h5><p>Como conhecemos $v_N(a, y)$ e $\{\hat{r}_t, \hat{w}_t, \hat{T}_t\}^{N-1}_{t=1}$ podemos solucionar para $\{\hat{v}_t, \hat{c}_t, \hat{a}_{t+1}\}^{N-1}_{t=1}$ retroativamente.
 \begin{align*}
@@ -14515,11 +14515,11 @@ Calculando o SS final
 <h5 id="Passo-6">Passo 6<a class="anchor-link" href="#Passo-6">&#182;</a></h5><p>Com as funções políticas $\{\hat{a}_{t+1}\}$, podemos definir as leis de transição $\{\Gamma_t\}^{N-1}_{t=1}$. Mas como sabemos que $\Phi_0 = \Phi_1$ do equilíbrio estacionário inicial, podemos iterar as distribuições para frente
 $$ \hat{\Phi}_{t+1} = \Gamma_t(\hat{\Phi}_t) $$
 para $t = 1, ..., N-1$.</p>
-<h5 id="Passo-7">Passo 7<a class="anchor-link" href="#Passo-7">&#182;</a></h5><p>Com $\{\hat{\Phi}\}^N_{t=1}$, podemos computar
-$$ \hat{A} = \int{a\ d\hat{\Phi}_t} $$
+<h5 id="Passo-7">Passo 7<a class="anchor-link" href="#Passo-7">&#182;</a></h5><p>Com $\{\hat{\Phi}_t\}^N_{t=1}$, podemos computar
+$$ \hat{A}_t = \int{a\ d\hat{\Phi}_t} $$
 para $t = 1, ..., N$.</p>
 <h5 id="Passo-8">Passo 8<a class="anchor-link" href="#Passo-8">&#182;</a></h5><p>Verifique se
-$$ \max_{1\le t \le N}\left| \hat{A}_t - \hat{K}_t \right| &lt; \vare psilon $$
+$$ \max_{1\le t \le N}\left| \hat{A}_t - \hat{K}_t \right| &lt; \varepsilon $$
 Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-1}_{t=1}$ no passo 4.</p>
 <h5 id="Passo-9">Passo 9<a class="anchor-link" href="#Passo-9">&#182;</a></h5><p>Verifique se $\left\| \hat{\Phi}_N - \Phi_N \right\| &lt; \varepsilon$.</p>
 <ul>
@@ -14544,14 +14544,14 @@ Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-
     <span class="c1">## Passo 4.</span>
     <span class="n">K_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-        <span class="n">K_path</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="n">K_inf</span><span class="o">*</span><span class="n">t</span><span class="o">+</span><span class="n">K_0</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">t</span><span class="p">)</span> <span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">K_path</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">K_inf</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">K_0</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">t</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># trajetória linear entre os capitais</span>
 <span class="c1">#    print(K_path)</span>
     <span class="c1"># fig, ax = plt.subplots()</span>
     <span class="c1"># ax.plot(range(N), K_path,&#39;-o&#39;)</span>
     
     <span class="n">norm_K_path</span><span class="p">,</span> <span class="n">tol_K_path</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1e-3</span>
     
-    <span class="c1">## Passo 5.</span>
+    <span class="c1">## Passo 4.</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">norm_K_path</span><span class="o">&gt;</span><span class="n">tol_K_path</span><span class="p">):</span>
         <span class="n">r_path</span><span class="p">,</span> <span class="n">w_path</span><span class="p">,</span> <span class="n">Tr_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -14568,7 +14568,7 @@ Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-
         <span class="c1"># plt.show()</span>
         
         
-        <span class="c1">## Passo 6.</span>
+        <span class="c1">## Passo 5.</span>
         <span class="n">V_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="p">(</span><span class="n">n_y</span><span class="p">,</span> <span class="n">n_a</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="p">)</span>
         <span class="n">V_path</span><span class="p">[:,:,</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">V_inf</span>
         <span class="n">iG_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="p">(</span><span class="n">n_y</span><span class="p">,</span> <span class="n">n_a</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span> <span class="p">)</span>
@@ -14589,7 +14589,7 @@ Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-
             <span class="n">iG_path</span><span class="p">[:,:,</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">iG</span>
             <span class="c1"># plt.plot(a_grid, V_path[0,:,t-2])</span>
             
-        <span class="c1">## Passo 7.</span>
+        <span class="c1">## Passo 6.</span>
         <span class="n">Gamma_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="p">(</span><span class="n">n_y</span><span class="o">*</span><span class="n">n_a</span><span class="p">,</span> <span class="n">n_y</span><span class="o">*</span><span class="n">n_a</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="p">)</span>
         <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
             <span class="n">iG</span> <span class="o">=</span> <span class="n">iG_path</span><span class="p">[:,:,</span><span class="n">t</span><span class="p">]</span>
@@ -14603,7 +14603,7 @@ Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-
             <span class="n">Gamma_t</span> <span class="o">=</span> <span class="n">Gamma_path</span><span class="p">[:,:,</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
             <span class="n">phi_path</span><span class="p">[</span><span class="n">t</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Phi_t</span><span class="p">,</span> <span class="n">Gamma_t</span><span class="p">)</span>
         
-        <span class="c1">## Passo 8.</span>
+        <span class="c1">## Passo 7.</span>
         <span class="n">A_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="n">N</span> <span class="p">)</span>
         <span class="c1">#A_path[t] = compute_Ea()</span>
         
@@ -14632,7 +14632,7 @@ Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-
         <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
         
-        <span class="c1">## Passo 9.</span>
+        <span class="c1">## Passo 8.</span>
         <span class="n">norm_K_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="n">A_path</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">-</span><span class="n">K_path</span><span class="p">[</span><span class="n">ii</span><span class="p">])</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)])</span>
         <span class="c1"># norm_K_path = np.max([abs(A_path[ii]-K_path[ii]) for ii in range(N-1)])</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Norma da trajetória de Capital:&#39;</span><span class="p">,</span><span class="n">norm_K_path</span><span class="p">)</span>
@@ -14642,7 +14642,7 @@ Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-
             <span class="c1"># print(ii)</span>
             <span class="n">K_path</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">K_path</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">*</span><span class="n">A_path</span><span class="p">[</span><span class="n">ii</span><span class="p">])</span>
 
-    <span class="c1">## Atualização do valor da norma</span>
+    <span class="c1">## Passo 9.</span>
     <span class="n">norm_Phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">phi_path</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span><span class="o">-</span><span class="n">Phi_inf</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Norma da distribuição final:&#39;</span><span class="p">,</span><span class="n">norm_Phi</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;======================================================================</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
