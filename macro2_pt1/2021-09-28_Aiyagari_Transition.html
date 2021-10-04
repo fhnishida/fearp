@@ -14545,7 +14545,7 @@ Se sim, vá para passo 9. Caso contrário, ajuste chutes para $\{\hat{K}_t\}^{N-
     <span class="n">K_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
         <span class="n">K_path</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">K_inf</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">K_0</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">t</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># trajetória linear entre os capitais</span>
-<span class="c1">#    print(K_path)</span>
+    <span class="c1"># print(K_path)</span>
     <span class="c1"># fig, ax = plt.subplots()</span>
     <span class="c1"># ax.plot(range(N), K_path,&#39;-o&#39;)</span>
     
