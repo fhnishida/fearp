@@ -1,4 +1,4 @@
-Provider Number;Hospital Name;City;State;County Name;Hospital 30-Day Death Rates from Heart Attack;Hospital 30-Day Death Rates from Heart Failure;Hospital 30-Day Death Rates from Pneumonia
+Provider Number;Hospital Name;City;State;County Name;Death Rates from Heart Attack;Death Rates from Heart Failure;Death Rates from Pneumonia
 10001;SOUTHEAST ALABAMA MEDICAL CENTER;DOTHAN;AL;HOUSTON;14.3;11.4;10.9
 10005;MARSHALL MEDICAL CENTER SOUTH;BOAZ;AL;MARSHALL;18.5;15.2;13.9
 10006;ELIZA COFFEE MEMORIAL HOSPITAL;FLORENCE;AL;LAUDERDALE;18.1;11.3;13.4
